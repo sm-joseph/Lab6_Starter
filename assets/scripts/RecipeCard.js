@@ -17,27 +17,21 @@ class RecipeCard extends HTMLElement {
     let styleEl = document.createElement('style');
 
     // A4. TODO - Insert all of the styles from cardTemplate.html into the <style> element you just made
-    styleEl.sheet.insertRule(`
+    styleEl.textContent = `
       * {
         font-family: sans-serif;
         margin: 0;
         padding: 0;
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       a {
         text-decoration: none;
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       a:hover {
         text-decoration: underline;
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       article {
         align-items: center;
         border: 1px solid rgb(223, 225, 229);
@@ -49,26 +43,20 @@ class RecipeCard extends HTMLElement {
         padding: 0 16px 16px 16px;
         width: 178px;
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       div.rating {
         align-items: center;
         column-gap: 5px;
         display: flex;
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       div.rating>img {
         height: auto;
         display: inline-block;
         object-fit: scale-down;
         width: 78px;
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       article>img {
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
@@ -77,24 +65,18 @@ class RecipeCard extends HTMLElement {
         margin-left: -16px;
         width: calc(100% + 32px);
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       p.ingredients {
         height: 32px;
         line-height: 16px;
         padding-top: 4px;
         overflow: hidden;
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       p.organization {
         color: black !important;
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       p.title {
         display: -webkit-box;
         font-size: 16px;
@@ -104,16 +86,14 @@ class RecipeCard extends HTMLElement {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
       }
-    `)
 
-    styleEl.sheet.insertRule(`
       p:not(.title),
       span,
       time {
         color: #70757A;
         font-size: 12px;
       }
-    `)
+    `;
 
     // A5. TODO - Append the <style> and <article> elements to the Shadow DOM
     shadowEl.append(articleEl);
