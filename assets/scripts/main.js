@@ -90,6 +90,9 @@ function initFormHandler() {
     rc.data = recipeObject;
 
     // B8. TODO - Append this new <recipe-card> to <main>
+    let mainRef = document.querySelector('main');
+    mainRef.append(rc);
+
     // B9. TODO - Get the recipes array from localStorage, add this new recipe to it, and
     //            then save the recipes array back to localStorage
   });
