@@ -82,6 +82,15 @@ function initFormHandler() {
     //            make this easier to read), and then extract the keys and corresponding
     //            values from the FormData object and insert them into recipeObject
     let recipeObject = {};
+    recipeObject.append("imgSrc", formData.get("imgSrc"));
+    recipeObject.append("imgAlt", formData.get("imgAlt"));
+    recipeObject.append("titleLnk", formData.get("titleLnk"));
+    recipeObject.append("titleTxt", formData.get("titleTxt"));
+    recipeObject.append("organization", formData.get("organization"));
+    recipeObject.append("rating", formData.get("rating"));
+    recipeObject.append("numRatings", formData.get("numRatings"));
+    recipeObject.append("lengthTime", formData.get("lengthTime"));
+    recipeObject.append("ingredients", formData.get("ingredients"));
 
     // B6. TODO - Create a new <recipe-card> element
     let rc = document.createElement("recipe-card");
